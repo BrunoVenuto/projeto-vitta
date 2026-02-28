@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", serif;
+  
+  --color-vitta-green: #2D5A27;
+  --color-vitta-light: #F5F7F2;
+  --color-vitta-accent: #8BA888;
+}
+
+@layer base {
+  body {
+    @apply bg-vitta-light text-slate-900 font-sans;
+  }
+}
+
+.glass-card {
+  @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-sm rounded-2xl;
+}
+
+.vitta-button {
+  @apply bg-vitta-green text-white px-6 py-2.5 rounded-full font-medium transition-all hover:bg-vitta-green/90 active:scale-95 disabled:opacity-50;
+}
